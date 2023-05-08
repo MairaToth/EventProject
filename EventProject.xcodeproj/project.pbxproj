@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D1E3F052A0855B9006890A5 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1E3F042A0855B9006890A5 /* EventViewModel.swift */; };
+		6D1E3F082A0855DC006890A5 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1E3F072A0855DC006890A5 /* EventModel.swift */; };
+		6D1E3F0A2A098B0F006890A5 /* ScreenEventDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1E3F092A098B0F006890A5 /* ScreenEventDetailsCell.swift */; };
+		6D1E3F102A09A698006890A5 /* InitialEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1E3F0F2A09A698006890A5 /* InitialEventView.swift */; };
 		6DBFC8522A07E8C300D2F13A /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBFC8512A07E8C300D2F13A /* DetailsViewController.swift */; };
 		6DBFC8542A07E97500D2F13A /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBFC8532A07E97500D2F13A /* DetailsView.swift */; };
 		6DCDF3792A0433E200A97BBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCDF3782A0433E200A97BBF /* AppDelegate.swift */; };
@@ -17,7 +21,7 @@
 		6DCDF3902A0433E300A97BBF /* EventProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCDF38F2A0433E300A97BBF /* EventProjectTests.swift */; };
 		6DCDF39A2A0433E300A97BBF /* EventProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCDF3992A0433E300A97BBF /* EventProjectUITests.swift */; };
 		6DCDF39C2A0433E300A97BBF /* EventProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCDF39B2A0433E300A97BBF /* EventProjectUITestsLaunchTests.swift */; };
-		6DCDF3AA2A04396800A97BBF /* EventImageInitialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCDF3A92A04396800A97BBF /* EventImageInitialCell.swift */; };
+		6DCDF3AA2A04396800A97BBF /* EventInitialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCDF3A92A04396800A97BBF /* EventInitialCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D1E3F042A0855B9006890A5 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		6D1E3F072A0855DC006890A5 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		6D1E3F092A098B0F006890A5 /* ScreenEventDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenEventDetailsCell.swift; sourceTree = "<group>"; };
+		6D1E3F0F2A09A698006890A5 /* InitialEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialEventView.swift; sourceTree = "<group>"; };
 		6DBFC8512A07E8C300D2F13A /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		6DBFC8532A07E97500D2F13A /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		6DCDF3752A0433E200A97BBF /* EventProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,7 +60,7 @@
 		6DCDF3952A0433E300A97BBF /* EventProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DCDF3992A0433E300A97BBF /* EventProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventProjectUITests.swift; sourceTree = "<group>"; };
 		6DCDF39B2A0433E300A97BBF /* EventProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		6DCDF3A92A04396800A97BBF /* EventImageInitialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventImageInitialCell.swift; sourceTree = "<group>"; };
+		6DCDF3A92A04396800A97BBF /* EventInitialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInitialCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D1E3F032A084FFF006890A5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6D1E3F042A0855B9006890A5 /* EventViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6D1E3F062A0855BF006890A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6D1E3F072A0855DC006890A5 /* EventModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6D1E3F0B2A09A2BC006890A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6DCDF3812A0433E300A97BBF /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6D1E3F0C2A09A2D6006890A5 /* Aplication */ = {
+			isa = PBXGroup;
+			children = (
+				6DCDF3782A0433E200A97BBF /* AppDelegate.swift */,
+				6DCDF37A2A0433E200A97BBF /* SceneDelegate.swift */,
+				6DCDF3832A0433E300A97BBF /* LaunchScreen.storyboard */,
+			);
+			path = Aplication;
+			sourceTree = "<group>";
+		};
+		6D1E3F0D2A09A324006890A5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6DBFC8512A07E8C300D2F13A /* DetailsViewController.swift */,
+				6DCDF37C2A0433E200A97BBF /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6D1E3F0E2A09A388006890A5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6D1E3F092A098B0F006890A5 /* ScreenEventDetailsCell.swift */,
+				6DCDF3A92A04396800A97BBF /* EventInitialCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		6DCDF36C2A0433E200A97BBF = {
 			isa = PBXGroup;
 			children = (
@@ -103,14 +163,13 @@
 		6DCDF3772A0433E200A97BBF /* EventProject */ = {
 			isa = PBXGroup;
 			children = (
+				6D1E3F0E2A09A388006890A5 /* Cell */,
+				6D1E3F0D2A09A324006890A5 /* ViewController */,
 				6DCDF3A82A04393300A97BBF /* View */,
-				6DCDF3782A0433E200A97BBF /* AppDelegate.swift */,
-				6DCDF37A2A0433E200A97BBF /* SceneDelegate.swift */,
-				6DCDF37C2A0433E200A97BBF /* ViewController.swift */,
-				6DBFC8512A07E8C300D2F13A /* DetailsViewController.swift */,
-				6DBFC8532A07E97500D2F13A /* DetailsView.swift */,
-				6DCDF3812A0433E300A97BBF /* Assets.xcassets */,
-				6DCDF3832A0433E300A97BBF /* LaunchScreen.storyboard */,
+				6D1E3F062A0855BF006890A5 /* Model */,
+				6D1E3F032A084FFF006890A5 /* ViewModel */,
+				6D1E3F0C2A09A2D6006890A5 /* Aplication */,
+				6D1E3F0B2A09A2BC006890A5 /* Resources */,
 				6DCDF3862A0433E300A97BBF /* Info.plist */,
 			);
 			path = EventProject;
@@ -136,7 +195,8 @@
 		6DCDF3A82A04393300A97BBF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6DCDF3A92A04396800A97BBF /* EventImageInitialCell.swift */,
+				6DBFC8532A07E97500D2F13A /* DetailsView.swift */,
+				6D1E3F0F2A09A698006890A5 /* InitialEventView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -271,11 +331,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D1E3F0A2A098B0F006890A5 /* ScreenEventDetailsCell.swift in Sources */,
 				6DCDF37D2A0433E200A97BBF /* ViewController.swift in Sources */,
-				6DCDF3AA2A04396800A97BBF /* EventImageInitialCell.swift in Sources */,
+				6D1E3F102A09A698006890A5 /* InitialEventView.swift in Sources */,
+				6DCDF3AA2A04396800A97BBF /* EventInitialCell.swift in Sources */,
 				6DCDF3792A0433E200A97BBF /* AppDelegate.swift in Sources */,
 				6DCDF37B2A0433E200A97BBF /* SceneDelegate.swift in Sources */,
 				6DBFC8522A07E8C300D2F13A /* DetailsViewController.swift in Sources */,
+				6D1E3F052A0855B9006890A5 /* EventViewModel.swift in Sources */,
+				6D1E3F082A0855DC006890A5 /* EventModel.swift in Sources */,
 				6DBFC8542A07E97500D2F13A /* DetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,7 +438,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_FLATTEN_NIBS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_NO_PIE = NO;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -428,7 +494,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_FLATTEN_NIBS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_NO_PIE = NO;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -450,7 +518,6 @@
 				INFOPLIST_FILE = EventProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -478,7 +545,6 @@
 				INFOPLIST_FILE = EventProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
