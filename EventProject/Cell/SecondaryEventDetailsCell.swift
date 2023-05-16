@@ -1,19 +1,18 @@
 import Foundation
 import UIKit
 
-protocol ScreenEventDetailsCellDelegate: AnyObject {
+protocol SecondaryEventDetailsCellDelegate: AnyObject {
     func didTap()
     func clickAction()
 }
 
-class ScreenEventDetailsCell: UITableViewCell {
+class SecondaryEventDetailsCell: UITableViewCell {
     
-    weak var delegate: ScreenEventDetailsCellDelegate?
+    weak var delegate: SecondaryEventDetailsCellDelegate?
     static let identifier: String = "ScreenEventDetailsCell"
     
     private lazy var eventImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "dogs")
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 16.0
         imageView.clipsToBounds = true
@@ -35,7 +34,6 @@ class ScreenEventDetailsCell: UITableViewCell {
     
     private lazy var eventTitleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Feira de adoção de animais na Redenção"
         label.font = UIFont.boldSystemFont(ofSize: 24)
         label.textColor = .black
         label.textAlignment = .center
@@ -45,7 +43,6 @@ class ScreenEventDetailsCell: UITableViewCell {
     
     private lazy var dataLabel: UILabel = {
         let label = UILabel()
-        label.text = "25/05/2023"
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .systemGray
         label.textAlignment = .center
@@ -55,7 +52,6 @@ class ScreenEventDetailsCell: UITableViewCell {
     
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "O Patas Dadas estará na Redenção, nesse domingo, com cães para adoção e produtos à venda!\n\nNa ocasião, teremos bottons, bloquinhos e camisetas!\n\nTraga seu Pet, os amigos e o chima, e venha aproveitar esse dia de sol com a gente e com alguns de nossos peludinhos - que estarão prontinhos para ganhar o ♥ de um humano bem legal pra chamar de seu. \n\nAceitaremos todos os tipos de doação:\n- guias e coleiras em bom estado\n- ração (as que mais precisamos no momento são sênior e filhote)\n- roupinhas \n- cobertas \n- remédios dentro do prazo de validade"
         label.font = UIFont.systemFont(ofSize: 20)
         label.textColor = .black
         label.textAlignment = .left
@@ -117,6 +113,15 @@ class ScreenEventDetailsCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .white
         setConstraints()
+    }
+    
+    func configure(viewModel: EventViewModel?) {
+        guard let viewModel = viewModel else { return }
+        eventTitleLabel.text = viewModel.title
+        dataLabel.text = viewModel.date
+        descriptionLabel.text = viewModel.description
+        eventImage.downloaded(from: viewModel.image, contentMode: .scaleAspectFill)
+        
     }
     
     private func setConstraints() {

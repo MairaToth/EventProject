@@ -1,17 +1,18 @@
 import UIKit
-protocol DetailsViewDelegate: AnyObject {
+protocol SecondaryDetailsViewDelegate: AnyObject {
     func didTap()
     func clickAction()
 }
 
-class DetailsView: UIView {
+class SecondaryDetailsView: UIView {
     
-    weak var delegate: DetailsViewDelegate?
+    weak var delegate: SecondaryDetailsViewDelegate?
+    private var eventVM: EventViewModel?
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.dataSource = self
-        tableView.register(ScreenEventDetailsCell.self, forCellReuseIdentifier: ScreenEventDetailsCell.identifier)
+        tableView.register(SecondaryEventDetailsCell.self, forCellReuseIdentifier: SecondaryEventDetailsCell.identifier)
         tableView.separatorStyle = .singleLine
         return tableView
     }()
@@ -22,15 +23,15 @@ class DetailsView: UIView {
     
     init() {
         super.init (frame: .zero)
-        backgroundColor = .white
         configConstraints()
     }
     
     
     
     private func configConstraints() {
+        backgroundColor = .white
+
         addSubview(tableView)
-        
         tableView.translatesAutoresizingMaskIntoConstraints = false
        
         NSLayoutConstraint.activate([
@@ -42,22 +43,31 @@ class DetailsView: UIView {
     }
 }
 
-extension DetailsView: UITableViewDataSource {
+extension SecondaryDetailsView {
+    func configure(viewModel: EventViewModel?) {
+        eventVM = viewModel
+        tableView.reloadData()
+    }
+}
+
+extension SecondaryDetailsView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ScreenEventDetailsCell.identifier, for: indexPath) as? ScreenEventDetailsCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SecondaryEventDetailsCell.identifier, for: indexPath) as? SecondaryEventDetailsCell else {
             return UITableViewCell()
         }
+        
         cell.selectionStyle = .none
+        cell.configure(viewModel: eventVM)
         cell.delegate = self
         return cell
     }
 }
 
-extension DetailsView: ScreenEventDetailsCellDelegate {
+extension SecondaryDetailsView: SecondaryEventDetailsCellDelegate {
         func didTap() {
             delegate?.didTap()
         }
